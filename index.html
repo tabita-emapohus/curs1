@@ -24,8 +24,14 @@
                 <li><a href="http://emanuel.ro" target="_blank">Site UEO</a></li>
             </ul>
         </nav>
-        <h1> Titlu 1</h1>
+        <h1 class="title" style="color: yellow;"> Titlu 1</h1>
+        <style>
+            .title{
+                color:green
+            }
+        </style>
         <h2> Titlu 2</h2>
+        <h2 class="title-a"> Titlu 2a</h2>
         <h3> Titlu 3</h3>
         <h4> Titlu 4</h4>
         <h5> Titlu 5</h5>
@@ -41,10 +47,10 @@
         sunt!
 
         <hr />
-        <button>Test</button>
-
+        <button onclick="console.log('Button Clicked!')">Test</button>
+        <button onclick="count()">Test Function</button>
         <hr />
-        <input type="button" value="Button from Input">
+        <input type="button" value="Button from Input" />
         <hr />
         <input type="color" name="Culoare">
         <hr />
@@ -85,32 +91,54 @@
                 </ul>
             </li>
         </ul>
-        <hr/>
+        <hr />
         <img src="Horse.jpg" alt="Horse" width="400">
-        <img src="https://mariusgabiphotography.com/wp-content/uploads/2022/01/Pitigoiul-albastru-ca-cerul-Cyanistes-caeruleus-in-padure-1024x682.jpg" alt="Pasare" width="500">
-        <hr/>
+        <img src="https://mariusgabiphotography.com/wp-content/uploads/2022/01/Pitigoiul-albastru-ca-cerul-Cyanistes-caeruleus-in-padure-1024x682.jpg"
+            alt="Pasare" width="400">
+        <hr />
         <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, tempore minus temporibus repudiandae cum aut nostrum repellat obcaecati soluta aliquid vel dolorem aspernatur dolores exercitationem saepe laudantium, explicabo eos distinctio.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, tempore minus temporibus repudiandae
+            cum aut nostrum repellat obcaecati soluta aliquid vel dolorem aspernatur dolores exercitationem saepe
+            laudantium, explicabo eos distinctio.
         </div>
         <div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat veritatis maxime, porro, magni consequatur obcaecati vero quis et velit facere quibusdam dignissimos veniam adipisci laborum ipsa! Reprehenderit nulla itaque temporibus!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat veritatis maxime, porro, magni consequatur
+            obcaecati vero quis et velit facere quibusdam dignissimos veniam adipisci laborum ipsa! Reprehenderit nulla
+            itaque temporibus!
         </div>
         <hr />
         <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus velit officia sint rerum quidem deserunt explicabo error delectus voluptates tempore ullam, quasi aliquid ipsum necessitatibus aperiam! Asperiores dolorum distinctio reprehenderit.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus velit officia sint rerum quidem
+            deserunt explicabo error delectus voluptates tempore ullam, quasi aliquid ipsum necessitatibus aperiam!
+            Asperiores dolorum distinctio reprehenderit.
         </p>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam totam asperiores accusamus, ea minima vitae earum. Necessitatibus, amet quibusdam! Doloremque atque accusantium et aliquam, iusto numquam sed! Voluptatem, harum ab.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam totam asperiores accusamus, ea minima vitae
+            earum. Necessitatibus, amet quibusdam! Doloremque atque accusantium et aliquam, iusto numquam sed!
+            Voluptatem, harum ab.
         </p>
-        
+        <canvas id="draw1"></canvas>
+
     </main>
+    <footer> Copyright &copy; 2024</footer>
+    <script>
+        console.log("Salut din consola!", counter);
+        let counter = 0;
+        function count() {
+            counter++;
+            console.log("Salut din functie!", counter);
+        }
 
-    <footer>
-        Copyright &copy; 2024
-    </footer>
+        const canvas = document.getElementById("draw1");
+        const ctx = canvas.getContext("2d");
 
+        ctx.fillStyle = "red";
+        ctx.fillRect(10, 10, 150, 100);
+    </script>
     <!-- Adaugare fisiere externe JS -->
-    <script scr="script.js"></script>
+    <script src="script.js"></script>
+
+    <script type="module" src="script-module-way.js"></script>
 </body>
 
 </html>
